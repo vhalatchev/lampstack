@@ -50,7 +50,7 @@ spec:
         tier: engine
     spec:
       containers:
-      - image: fjudith/wordpress:php7-fpm
+      - image: vihroman/dockerpush:php7-fpm
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
@@ -180,7 +180,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: fjudith/wordpress:nginx
+      - image: vihroman/dockerpush:nginx
         name: nginx
         ports:
         - containerPort: 80
