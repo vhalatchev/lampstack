@@ -5,9 +5,9 @@
 pipeline {
     agent any
     environment {
-        REPO = 'fjudith/wordpress'
+        REPO = 'vihroman/dockerpush'
         PRIVATE_REPO = "${PRIVATE_REGISTRY}/${REPO}"
-        DOCKER_PRIVATE = credentials('docker-private-registry')
+        DOCKER_PRIVATE = credentials('dockerHubCred')
     }
     stages {
         stage ('Checkout') {
