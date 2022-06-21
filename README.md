@@ -47,7 +47,7 @@ services:
 
   nginx:
     build: nginx/
-    image: fjudith/wordpress:nginx
+    image: vihroman/dockerpush:nginx
     ports:
     - 32716:443/tcp
     - 32715:80/tcp
@@ -59,7 +59,7 @@ services:
 
   wordpress:
     build: php7-fpm/
-    image: fjudith/wordpress:php7-fpm
+    image: vihroman/dockerpush:php7-fpm
     environment:
       WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_NAME: wordpress
@@ -73,7 +73,7 @@ services:
 
   cli:
     build: cli/
-    image: fjudith/wordpress:cli
+    image: vihroman/dockerpush:cli
     stdin_open: true
     tty: true
     depends_on:
